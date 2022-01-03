@@ -25,3 +25,12 @@ function fun2() {
 
 func1();
 fun2();
+
+// Having local and global variables
+var outerWear = 'shirt';
+function myOutfit() {
+    var outerWear = 'hoodie'; 
+    return outerWear;
+}
+console.log(myOutfit()) // local variable takes predence over global variable
+console.log(outerWear) // this just calls on the global var though
