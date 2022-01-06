@@ -93,3 +93,13 @@ function orOperator(val) {
 console.log(orOperator(30));
 console.log(orOperator(5));
 console.log(orOperator(15));
+
+// Returning a boolean value:
+function isLess(a, b) {
+    return a > b 
+    // this superior over the below code:
+    // if (a>b) {
+    //     return true
+    // } 
+    // return false
+}
