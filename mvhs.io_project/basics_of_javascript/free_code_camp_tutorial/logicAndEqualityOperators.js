@@ -74,11 +74,22 @@ console.log(greaterLessThan(20));
 console.log(greaterLessThan(10));
 console.log(greaterLessThan(1));
 
-// And, or operators
-function logicalOps(val) {
+// And operator
+function andOperator(val) {
     if (val > 50 && val < 100) { // && = and operator
         return 'Value is greater than 50 but less than 100';
     }
     return 'Value is not between 50 and 100'
 }
-console.log(logicalOps(75));
+console.log(andOperator(75));
+
+// Or operator
+function orOperator(val) {
+    if (val < 10 || val > 20) { // || = or operator
+        return 'Outside';
+    }
+    return 'Inside';
+}
+console.log(orOperator(30));
+console.log(orOperator(5));
+console.log(orOperator(15));
