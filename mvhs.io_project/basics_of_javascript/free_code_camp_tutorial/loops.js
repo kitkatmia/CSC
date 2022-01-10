@@ -40,3 +40,15 @@ for (var i = 0; i < arr.length; i++) {
     total += arr[i];
 }
 console.log(total);
+
+// Nested for loop
+var nestArr = [[1, 2], [3, 4], [5, 6, 7]];
+var prod = 1;
+
+for (i = 0; i < nestArr.length; i++) {
+    for (var j = 0; j < nestArr[i].length; j++) {
+        prod *= nestArr[i][j];
+    }
+    console.log(prod)
+    prod = 1
+}
