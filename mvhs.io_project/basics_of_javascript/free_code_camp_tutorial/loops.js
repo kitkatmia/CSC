@@ -49,6 +49,16 @@ for (i = 0; i < nestArr.length; i++) {
     for (var j = 0; j < nestArr[i].length; j++) {
         prod *= nestArr[i][j];
     }
-    console.log(prod)
-    prod = 1
+    console.log(prod);
+    prod = 1;
 }
+
+// Do... While loops
+var arr = [];
+var i = 10
+
+do { // a do while loops runs something AND THEN checks the condition (so it'll always run through at least one iteration -- no matter the condition)
+    arr.push(i);
+    i++;
+} while (i < 5)
+console.log(arr);
