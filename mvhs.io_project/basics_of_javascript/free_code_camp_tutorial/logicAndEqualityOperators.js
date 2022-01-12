@@ -103,3 +103,14 @@ function isLess(a, b) {
     // } 
     // return false
 }
+
+// How the or operator can help shorten code
+arr = {
+    'dog': 'Bob',
+    'cat': 'Joe'
+}
+function findVal(prop) {
+    return arr[prop] || 'No such property' // if prop exists, the first condtion is returned; else the string is returned
+}
+console.log(findVal('dog'))
+console.log(findVal('pup'))
