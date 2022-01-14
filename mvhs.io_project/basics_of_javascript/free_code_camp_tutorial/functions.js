@@ -22,9 +22,9 @@ function minusSeven(num) {
 console.log(minusSeven(7));
 
 // Understanding undefined values
-var sum = 0;
+var sum1 = 0;
 function addThree() {
-    sum += 3;
+    sum1 += 3;
 }
 console.log(addThree());
 
@@ -81,3 +81,10 @@ function cc(card) {
 }
 cc(2); cc('K'); cc(10); cc('K'); cc('A'); // executing the function a bunch of times
 console.log(cc(4)) // it's asking: after all of the cards above + this one, should you bet or hold?
+
+// Preset arguments/parameters
+function subtract(num1 = 4, num2 = 2) {
+    return num1 - num2;
+}
+console.log(subtract(7)); // num1 is set to 7 and num2 remains equal to 2
+
