@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+// IMPORTS
+import { useState } from 'react'; // alows you to edit variables and re-render the site in real-time 
+import Todo from './components/todoapp/Todo';
 
-function App() {
-  return (
+function App() { // called a component
+  // JS UP HERE
+  const age = 3;
+
+  // Button below
+  const [count, setCount] = useState(0); // count = var name, setCount = the function you want to use to change count
+  const addOne = (count) => {
+    setCount(count + 1);
+  }
+  return ( // returns JSX - implementing JS in HTML
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{count}</h1>
+      <button onClick={()=>addOne(count)}>Count</button> 
+      {/* if your function takes in a parameter (as shown above) you have to use an anonymous function */}
+
+      <Todo /> {/* you can also do <Todo> <Todo/>*/}
     </div>
   );
 }
