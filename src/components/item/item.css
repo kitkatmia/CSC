@@ -1,0 +1,8 @@
+.item {
+    border: 3px solid blue;
+    width: 25vw;
+}
+
+.done {
+    text-decoration: line-through;
+}
