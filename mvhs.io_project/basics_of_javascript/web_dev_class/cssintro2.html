@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <style>
+            * { /* * applies to all elements on page */
+                padding: 0; /* how far the inner content is from the margins */
+                margin: 0; /* how far the border is from other elements */
+                font-family: sans-serif;
+                box-sizing: border-box;
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: 1s;
+            }
+            .container{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .boxes{
+                padding: 20px;
+                border: 1px solid black;
+                margin: 15px;
+            }
+            #addContainer{
+                display: flex;
+                flex-direction: wrap;
+                flex-wrap: wrap;
+            }
+            .boxx{
+                padding: 30px;
+                margin: 15px;
+                border: 1px solid black;
+            }
+            .boxx-toggle{
+                background: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="addContainer">
+            <button onclick="addBoxes()">Add Box</button>
+            <button onclick="toggleClass()">Toggle Class</button>
+        </div>
+        <div class="box" id="'box" ></div>
+        <div class="container">
+            <div class='boxes'></div>
+            <div class='boxes'></div>
+            <div class='boxes'></div>
+            <div class='boxes'></div>
+            <div class='boxes'></div>
+        </div>
+        <script>
+            document.addEventListener('click', e=> { // listening in for userclick
+                let left = e.clientX; // horizontal coordinate = X coordinate of user mouse
+                let top = e.clientY; // vertical coordinate = Y coordinate of user mouse
+                document.getElementById('box').style.top = `${top}px`;
+                document.getElementById('box').style.left = `${left}px`;
+            });
+            function addBoxes() {
+                document.getElementById('AddContainer').innerHTML += 'div class="boxx"></div>';
+            }
+            function toggleClass(){
+                // get boxx class and access each individual box's properties
+                let boxes = document.querySelectorAll('.boxx');
+                boxes.forEach(box => {
+                    // classlist allows you to change properties
+                    box.classList.toggle('box-toggle')
+                })
+
+            }
+        </script>
+    </body>
+</html>
